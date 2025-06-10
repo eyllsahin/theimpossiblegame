@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://7pydm4lqyvjo"]
+
+[ext_resource type="Texture2D" uid="uid://blr527dg3ve1s" path="res://learngraviton/Whisk_4b236faebe.jpg" id="1_vesai"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Whisk4b236Faebe" type="Sprite2D" parent="."]
+position = Vector2(638.5, 360)
+scale = Vector2(0.911222, 0.932292)
+texture = ExtResource("1_vesai")

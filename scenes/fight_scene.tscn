@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cr40tslqn4cin"]
+
+[ext_resource type="Script" uid="uid://llt4towj1m5u" path="res://scripts/fight_scene.gd" id="1_iribs"]
+[ext_resource type="Texture2D" uid="uid://3l683n14sc6g" path="res://game/backgroundtemp.png" id="2_gksjr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(2966.75, 461.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(576.125, 1210.13)
+
+[node name="fightscene" type="Node2D"]
+script = ExtResource("1_iribs")
+
+[node name="Backgroundtemp" type="Sprite2D" parent="."]
+position = Vector2(686, 681)
+scale = Vector2(1.39531, 1.39531)
+texture = ExtResource("2_gksjr")
+
+[node name="Fighters" type="Node2D" parent="."]
+
+[node name="MapBorders" type="StaticBody2D" parent="."]
+
+[node name="upper" type="CollisionShape2D" parent="MapBorders"]
+position = Vector2(611, -139)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="left" type="CollisionShape2D" parent="MapBorders"]
+position = Vector2(-514, 573)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="right" type="CollisionShape2D" parent="MapBorders"]
+position = Vector2(1822, 517)
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="bottom" type="CollisionShape2D" parent="MapBorders"]
+position = Vector2(643, 1134)
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="SpawnLeft" type="Marker2D" parent="."]
+position = Vector2(348, 600)
+
+[node name="SpawnRight" type="Marker2D" parent="."]
+position = Vector2(1026, 600)

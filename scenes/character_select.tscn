@@ -1,0 +1,400 @@
+[gd_scene load_steps=24 format=3 uid="uid://8mwqicbuey0i"]
+
+[ext_resource type="VideoStream" uid="uid://4v3kvus62j2k" path="res://characterselection/background.ogv" id="1_7yigr"]
+[ext_resource type="Script" uid="uid://bbgughtlqhitw" path="res://scripts/character_select.gd" id="1_pfxxa"]
+[ext_resource type="Texture2D" uid="uid://b0xf20k5vbgav" path="res://startmenu/pressed.png" id="2_4hbjg"]
+[ext_resource type="Texture2D" uid="uid://d30m3kxqo5vuw" path="res://characterselection/characterselectiontemp.png" id="2_p44ra"]
+[ext_resource type="Texture2D" uid="uid://bs6k2spgdoakk" path="res://startmenu/normal.png" id="3_lqqhx"]
+[ext_resource type="Texture2D" uid="uid://ciyssamua2wxa" path="res://startmenu/hovered.png" id="4_8vty7"]
+[ext_resource type="FontFile" uid="uid://brqqs55oqwnrb" path="res://startmenu/Orange Gummy.otf" id="5_8d0rx"]
+[ext_resource type="VideoStream" uid="uid://c4a2x5l4jss63" path="res://characterselection/event horizon.ogv" id="7_aq61o"]
+[ext_resource type="VideoStream" uid="uid://cc72oudndmou2" path="res://characterselection/super-position dash.ogv" id="8_fes3t"]
+[ext_resource type="VideoStream" uid="uid://dc2xxv05jdr5l" path="res://characterselection/counter.ogv" id="9_tlgw2"]
+[ext_resource type="VideoStream" uid="uid://cefuyhlmhd1b0" path="res://characterselection/time dilation.ogv" id="10_atdxu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdubu"]
+texture = ExtResource("3_lqqhx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d21ai"]
+texture = ExtResource("3_lqqhx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rj586"]
+texture = ExtResource("3_lqqhx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4d7sh"]
+texture = ExtResource("4_8vty7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ir8iy"]
+texture = ExtResource("4_8vty7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hqns4"]
+texture = ExtResource("4_8vty7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0ka3"]
+texture = ExtResource("4_8vty7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0h7mo"]
+texture = ExtResource("3_lqqhx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nr8wp"]
+texture = ExtResource("2_4hbjg")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d2bti"]
+texture = ExtResource("3_lqqhx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ta5nu"]
+texture = ExtResource("3_lqqhx")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p44ra"]
+texture = ExtResource("3_lqqhx")
+
+[node name="character_select" type="Node2D"]
+script = ExtResource("1_pfxxa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Characterselectiontemp" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(643, 362)
+texture = ExtResource("2_p44ra")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CanvasLayer"]
+offset_right = 192.0
+offset_bottom = 137.0
+stream = ExtResource("1_7yigr")
+autoplay = true
+loop = true
+
+[node name="characterselectbutton" type="Button" parent="CanvasLayer"]
+offset_left = 149.0
+offset_top = 39.0
+offset_right = 429.0
+offset_bottom = 99.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nr8wp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/characterselectbutton"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 1.0
+offset_right = 241.0
+offset_bottom = 59.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 25
+text = "Graviton"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="characterselectbutton2" type="Button" parent="CanvasLayer"]
+offset_left = 834.0
+offset_top = 41.0
+offset_right = 1114.0
+offset_bottom = 101.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nr8wp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/characterselectbutton2"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 1.0
+offset_right = 241.0
+offset_bottom = 59.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 25
+text = "quanta"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+
+[node name="backbutton" type="Button" parent="CanvasLayer"]
+offset_left = 1119.0
+offset_top = 640.0
+offset_right = 1271.0
+offset_bottom = 711.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nr8wp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/backbutton"]
+layout_mode = 0
+offset_right = 152.0
+offset_bottom = 71.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 25
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timedilation" type="Button" parent="CanvasLayer"]
+offset_left = 529.0
+offset_top = 111.0
+offset_right = 625.0
+offset_bottom = 207.0
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p44ra")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+button_mask = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/timedilation"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 9.0
+offset_right = 95.0
+offset_bottom = 84.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 20
+text = "Time 
+Dilation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="eventhorizon" type="Button" parent="CanvasLayer"]
+offset_left = 529.0
+offset_top = 478.0
+offset_right = 626.0
+offset_bottom = 568.0
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p44ra")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+button_mask = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/eventhorizon"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 7.0
+offset_right = 104.0
+offset_bottom = 81.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 20
+text = "Event
+horizon"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="evasion" type="Button" parent="CanvasLayer"]
+offset_left = 664.0
+offset_top = 111.0
+offset_right = 760.0
+offset_bottom = 201.0
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p44ra")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+button_mask = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/evasion"]
+layout_mode = 0
+offset_top = 11.0
+offset_right = 96.0
+offset_bottom = 84.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 20
+text = "Super
+Position
+Dash"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="counter" type="Button" parent="CanvasLayer"]
+offset_left = 664.0
+offset_top = 479.0
+offset_right = 762.0
+offset_bottom = 569.0
+size_flags_vertical = 3
+focus_mode = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p44ra")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+button_mask = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/counter"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 18.0
+offset_right = 101.0
+offset_bottom = 75.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 19
+text = "Counter"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="learnquanta" type="Button" parent="CanvasLayer"]
+offset_left = 663.0
+offset_top = 305.0
+offset_right = 753.0
+offset_bottom = 349.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nr8wp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/learnquanta"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -36.0
+offset_right = 100.0
+offset_bottom = 81.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 20
+text = "learn"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="learngraviton" type="Button" parent="CanvasLayer"]
+offset_left = 529.0
+offset_top = 305.0
+offset_right = 619.0
+offset_bottom = 349.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_kdubu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_d21ai")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_rj586")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_4d7sh")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ir8iy")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_hqns4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0ka3")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0h7mo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_nr8wp")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_d2bti")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ta5nu")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/learngraviton"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = -36.0
+offset_right = 100.0
+offset_bottom = 81.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_8d0rx")
+theme_override_font_sizes/normal_font_size = 20
+text = "learn"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="eventhorizon2" type="VideoStreamPlayer" parent="CanvasLayer"]
+offset_left = 645.0
+offset_top = 118.0
+offset_right = 1273.0
+offset_bottom = 512.0
+stream = ExtResource("7_aq61o")
+expand = true
+loop = true
+metadata/_edit_lock_ = true
+
+[node name="evasion2" type="VideoStreamPlayer" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 118.0
+offset_right = 633.0
+offset_bottom = 512.0
+stream = ExtResource("8_fes3t")
+expand = true
+loop = true
+metadata/_edit_lock_ = true
+
+[node name="counter2" type="VideoStreamPlayer" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = 118.0
+offset_right = 633.0
+offset_bottom = 512.0
+stream = ExtResource("9_tlgw2")
+expand = true
+loop = true
+metadata/_edit_lock_ = true
+
+[node name="timebend2" type="VideoStreamPlayer" parent="CanvasLayer"]
+offset_left = 645.0
+offset_top = 118.0
+offset_right = 1273.0
+offset_bottom = 512.0
+stream = ExtResource("10_atdxu")
+expand = true
+loop = true
+metadata/_edit_lock_ = true

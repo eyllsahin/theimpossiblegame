@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://5n50j2oja5ks"
+path="res://.godot/imported/DALL·E 2025-03-21 14.54.14 - 16-bit pixel art animation frames of a futuristic armored tank fighter walking forward. The character, named Graviton, is heavily built, wearing a dar (2).png-840deb24e73c81555ce4775910351fcd.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://game/Graviton/timeover/DALL·E 2025-03-21 14.54.14 - 16-bit pixel art animation frames of a futuristic armored tank fighter walking forward. The character, named Graviton, is heavily built, wearing a dar (2).png"
+dest_files=["res://.godot/imported/DALL·E 2025-03-21 14.54.14 - 16-bit pixel art animation frames of a futuristic armored tank fighter walking forward. The character, named Graviton, is heavily built, wearing a dar (2).png-840deb24e73c81555ce4775910351fcd.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

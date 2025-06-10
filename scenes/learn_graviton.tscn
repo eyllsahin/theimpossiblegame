@@ -1,0 +1,429 @@
+[gd_scene load_steps=29 format=3 uid="uid://e1kghqmqakry"]
+
+[ext_resource type="Script" uid="uid://db2daac66qins" path="res://scripts/learn_graviton.gd" id="1_hrryf"]
+[ext_resource type="VideoStream" uid="uid://du0fq22e6phoq" path="res://learngraviton/Whisk_cauajgrimzdkzgyxlwzizjitndi5mc1hndq5ltn.ogv" id="1_vesai"]
+[ext_resource type="Texture2D" uid="uid://b0xf20k5vbgav" path="res://startmenu/pressed.png" id="2_we6m0"]
+[ext_resource type="Texture2D" uid="uid://bs6k2spgdoakk" path="res://startmenu/normal.png" id="3_hrryf"]
+[ext_resource type="Texture2D" uid="uid://ciyssamua2wxa" path="res://startmenu/hovered.png" id="4_guyyc"]
+[ext_resource type="FontFile" uid="uid://brqqs55oqwnrb" path="res://startmenu/Orange Gummy.otf" id="5_grwr8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aq3gg"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dihxr"]
+texture = ExtResource("3_hrryf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8c5kd"]
+texture = ExtResource("3_hrryf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3rqns"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vir1n"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3wc4a"]
+texture = ExtResource("4_guyyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4bn14"]
+texture = ExtResource("4_guyyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o68e2"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wyse"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wvupm"]
+texture = ExtResource("3_hrryf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uni3g"]
+texture = ExtResource("3_hrryf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hrryf"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guyyc"]
+texture = ExtResource("3_hrryf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_grwr8"]
+texture = ExtResource("3_hrryf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wpoio"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3gki0"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o313c"]
+texture = ExtResource("4_guyyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wj1h"]
+texture = ExtResource("4_guyyc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uvm5s"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w8wc8"]
+texture = ExtResource("2_we6m0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y0kut"]
+texture = ExtResource("3_hrryf")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m2urg"]
+texture = ExtResource("3_hrryf")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hrryf")
+
+[node name="background" type="VideoStreamPlayer" parent="."]
+offset_left = 1.0
+offset_right = 1283.0
+offset_bottom = 782.0
+stream = ExtResource("1_vesai")
+autoplay = true
+expand = true
+loop = true
+
+[node name="meet_button" type="Button" parent="."]
+offset_left = 555.0
+offset_top = 47.0
+offset_right = 746.0
+offset_bottom = 125.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="meet_button"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 9.0
+offset_right = 182.0
+offset_bottom = 67.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "meet graviton!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="why_button" type="Button" parent="."]
+offset_left = 1002.0
+offset_top = 574.0
+offset_right = 1193.0
+offset_bottom = 652.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="why_button"]
+layout_mode = 0
+offset_left = -4.0
+offset_top = 16.0
+offset_right = 204.0
+offset_bottom = 74.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "Science!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gravitybends_button" type="Button" parent="."]
+offset_left = 575.0
+offset_top = 625.0
+offset_right = 766.0
+offset_bottom = 703.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="gravitybends_button"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 185.0
+offset_bottom = 66.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "Gravity bends!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nothing_button" type="Button" parent="."]
+offset_left = 1004.0
+offset_top = 449.0
+offset_right = 1195.0
+offset_bottom = 527.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="nothing_button"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 11.0
+offset_right = 201.0
+offset_bottom = 69.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "Nothing can escape!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="timeis_button" type="Button" parent="."]
+offset_left = 92.0
+offset_top = 570.0
+offset_right = 288.0
+offset_bottom = 676.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="timeis_button"]
+layout_mode = 0
+offset_left = -9.0
+offset_top = 9.0
+offset_right = 199.0
+offset_bottom = 96.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "Time is different up here!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="heavily_button" type="Button" parent="."]
+offset_left = 96.0
+offset_top = 432.0
+offset_right = 287.0
+offset_bottom = 510.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="heavily_button"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 13.0
+offset_right = 202.0
+offset_bottom = 71.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "Heavi-ly gravitional"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="orbit_button" type="Button" parent="."]
+offset_left = 93.0
+offset_top = 292.0
+offset_right = 307.0
+offset_bottom = 377.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="orbit_button"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 74.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "it is the orbits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="burn_button" type="Button" parent="."]
+offset_left = 975.0
+offset_top = 164.0
+offset_right = 1189.0
+offset_bottom = 249.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="burn_button"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 74.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "what to do with burns?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="bleed_button" type="Button" parent="."]
+offset_left = 980.0
+offset_top = 291.0
+offset_right = 1194.0
+offset_bottom = 405.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_aq3gg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_dihxr")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8c5kd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3rqns")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_vir1n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3wc4a")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4bn14")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_o68e2")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0wyse")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_wvupm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uni3g")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="bleed_button"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 12.0
+offset_right = 207.0
+offset_bottom = 91.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "what to do when bleeding?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VideoWindow" type="Window" parent="."]
+position = Vector2i(340, 222)
+size = Vector2i(600, 370)
+visible = false
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="VideoWindow"]
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 600.0
+offset_bottom = 402.0
+expand = true
+
+[node name="close_button" type="Button" parent="VideoWindow"]
+offset_left = 558.0
+offset_top = -28.0
+offset_right = 601.0
+offset_bottom = -4.0
+metadata/_edit_group_ = true
+
+[node name="backbutton" type="Button" parent="."]
+offset_left = 1086.0
+offset_top = 47.0
+offset_right = 1211.0
+offset_bottom = 118.0
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_hrryf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_guyyc")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_grwr8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_wpoio")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_3gki0")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_o313c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0wj1h")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_uvm5s")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_w8wc8")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_y0kut")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m2urg")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="backbutton"]
+layout_mode = 0
+offset_left = -45.0
+offset_top = 20.0
+offset_right = 168.0
+offset_bottom = 49.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_grwr8")
+theme_override_font_sizes/normal_font_size = 25
+text = "Back"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="meet_button" to="." method="_on_meet_button_pressed"]
+[connection signal="pressed" from="why_button" to="." method="_on_why_button_pressed"]
+[connection signal="pressed" from="gravitybends_button" to="." method="_on_gravitybends_button_pressed"]
+[connection signal="pressed" from="nothing_button" to="." method="_on_nothing_button_pressed"]
+[connection signal="pressed" from="timeis_button" to="." method="_on_timeis_button_pressed"]
+[connection signal="pressed" from="heavily_button" to="." method="_on_heavily_button_pressed"]
+[connection signal="pressed" from="orbit_button" to="." method="_on_orbit_button_pressed"]
+[connection signal="pressed" from="burn_button" to="." method="_on_burn_button_pressed"]
+[connection signal="pressed" from="bleed_button" to="." method="_on_bleed_button_pressed"]
+[connection signal="close_requested" from="VideoWindow" to="." method="_on_video_window_close_requested"]
+[connection signal="finished" from="VideoWindow/VideoStreamPlayer" to="." method="_on_VideoStreamPlayer_finished"]
+[connection signal="pressed" from="VideoWindow/close_button" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="backbutton" to="." method="_on_backbutton_pressed"]

@@ -1,0 +1,177 @@
+[gd_scene load_steps=20 format=3 uid="uid://bcq3qwtjo1inq"]
+
+[ext_resource type="Script" uid="uid://cnc5rvp5lf0oi" path="res://scripts/main_menu.gd" id="1_oa1go"]
+[ext_resource type="Texture2D" uid="uid://ciyssamua2wxa" path="res://startmenu/hovered.png" id="2_ekq3y"]
+[ext_resource type="Texture2D" uid="uid://b0xf20k5vbgav" path="res://startmenu/pressed.png" id="2_rygoe"]
+[ext_resource type="Texture2D" uid="uid://bs6k2spgdoakk" path="res://startmenu/normal.png" id="3_aieke"]
+[ext_resource type="FontFile" uid="uid://hyoho15svgb3" path="res://startmenu/RushDriver-Italic.otf" id="5_2cama"]
+[ext_resource type="FontFile" uid="uid://brqqs55oqwnrb" path="res://startmenu/Orange Gummy.otf" id="5_aieke"]
+[ext_resource type="Texture2D" uid="uid://bd67fo8xb8la6" path="res://startmenu/backgroundtemp.png" id="5_ekq3y"]
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_ekq3y"]
+file = "res://startmenu/background2.ogv"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2cama"]
+texture = ExtResource("2_rygoe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vcmgn"]
+texture = ExtResource("3_aieke")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c7wqh"]
+texture = ExtResource("3_aieke")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rygoe"]
+texture = ExtResource("2_rygoe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c8odt"]
+texture = ExtResource("2_rygoe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xnxmh"]
+texture = ExtResource("2_ekq3y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j23be"]
+texture = ExtResource("2_ekq3y")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ekq3y"]
+texture = ExtResource("2_rygoe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aieke"]
+texture = ExtResource("2_rygoe")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r8qa5"]
+texture = ExtResource("3_aieke")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dhwgf"]
+texture = ExtResource("3_aieke")
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oa1go")
+
+[node name="background" type="CanvasLayer" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="background"]
+offset_right = 1280.0
+offset_bottom = 720.0
+stream = SubResource("VideoStreamTheora_ekq3y")
+autoplay = true
+loop = true
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="background"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = 26.0
+offset_right = 159.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="characterselectbutton" type="Button" parent="background/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_2cama")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_vcmgn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_c7wqh")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_rygoe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_c8odt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_xnxmh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j23be")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ekq3y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aieke")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_r8qa5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dhwgf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="background/VBoxContainer/characterselectbutton"]
+layout_mode = 0
+offset_right = 280.0
+offset_bottom = 60.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_aieke")
+theme_override_font_sizes/normal_font_size = 25
+text = "CHARACTER SELECT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="optionsbutton" type="Button" parent="background/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_2cama")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_vcmgn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_c7wqh")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_rygoe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_c8odt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_xnxmh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j23be")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ekq3y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aieke")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_r8qa5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dhwgf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="background/VBoxContainer/optionsbutton"]
+layout_mode = 0
+offset_right = 280.0
+offset_bottom = 60.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_aieke")
+theme_override_font_sizes/normal_font_size = 25
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="exitbutton" type="Button" parent="background/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxTexture_2cama")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_vcmgn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_c7wqh")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_rygoe")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_c8odt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_xnxmh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j23be")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ekq3y")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_aieke")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_r8qa5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dhwgf")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="background/VBoxContainer/exitbutton"]
+layout_mode = 0
+offset_right = 280.0
+offset_bottom = 60.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_aieke")
+theme_override_font_sizes/normal_font_size = 25
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="background"]
+offset_left = 382.0
+offset_top = 21.0
+offset_right = 982.0
+offset_bottom = 226.0
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("5_2cama")
+theme_override_font_sizes/normal_font_size = 80
+text = "THE
+IMPOSSIBLE
+GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="background/RichTextLabel"]
+root_node = NodePath("../../..")
+
+[node name="mainmenutemp" type="Sprite2D" parent="."]
+texture = ExtResource("5_ekq3y")
+centered = false
+metadata/_edit_lock_ = true
